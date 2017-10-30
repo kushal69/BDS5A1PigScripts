@@ -1,0 +1,4 @@
+emp_order = order emp_det by emp_rating desc, emp_name asc;
+emp_limit = limit emp_order 5;
+emp = foreach emp_limit generate emp_id, emp_name;
+dump emp;

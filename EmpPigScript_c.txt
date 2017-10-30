@@ -1,0 +1,5 @@
+emp_join1 = join emp_det by emp_id, emp_exp by emp_id;
+emp2_order = order emp_join1 by emp_expenses desc, emp_name asc;
+lim2 = limit emp2_order 1;
+emp2 = foreach lim2 generate $0,$1;
+dump emp2;

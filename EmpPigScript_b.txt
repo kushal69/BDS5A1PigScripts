@@ -1,0 +1,5 @@
+emp_fil = filter emp_det by (emp_id % 2) != 0;
+emp1_order = order emp_fil by emp_salary desc;
+lim1 = limit emp1_order 3;
+emp1 = foreach lim1 generate emp_id, emp_name;
+dump emp1;

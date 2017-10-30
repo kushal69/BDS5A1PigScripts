@@ -1,0 +1,4 @@
+emp_join2 = join emp_det by emp_id, emp_exp by emp_id;
+emp3 = foreach emp_join2 generate $0,$1;
+distnct = distinct emp3;
+dump distnct;
